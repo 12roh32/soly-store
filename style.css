@@ -1,6 +1,7 @@
 /* RESET */
 body {
   margin: 0;
+  background-color: white;
 }
 
 /* LOGO */
@@ -10,11 +11,13 @@ body {
 
 /* HEADER */
 .header {
-  background-image: url(photo/Untitled1079_20260418021745.jpg);
+  background-image: url(photo/bg.jpg) ;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
+  border-radius: 0 0 20px 20px;
+  min-height: 50vh;
 }
 
 .header-links a:hover {
@@ -41,8 +44,10 @@ body {
 }
 
 .trendingn-container span {
+  max-width: 100%;
   color: #ee007b;
   font-size: 20px;
+  overflow: hidden;
 }
 
 .trending-Headers {
