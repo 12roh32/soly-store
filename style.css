@@ -1,134 +1,96 @@
 /* RESET */
 body {
   margin: 0;
-  background-color: white;
+  font-family: Arial, sans-serif;
+  background: white;
 }
 
 /* LOGO */
 .logo {
-  width: 100px;
+  width: 90px;
 }
 
 /* HEADER */
 .header {
-background-color:#87cefa ;
+  background: #87cefa;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 20px 30px;
   border-radius: 0 0 20px 20px;
-  height: 50vh;
-  
 }
 
-.header-links a:hover {
-  background-color: #ee007b;
-  border-radius: 15px;
+.header-links {
+  display: flex;
+  gap: 10px;
 }
 
 /* BUTTON */
 .btn {
-  background-color: #ee007b;
+  background: #ee007b;
   color: white;
-  border: 0;
-  border-radius: 40px;
   padding: 10px 15px;
+  border-radius: 30px;
+  text-decoration: none;
 }
 
 .btn:hover {
-  background-color: #ee007b;
+  opacity: 0.8;
 }
 
-/* TRENDING */
+/* CONTAINER */
 .trendingn-container {
-  padding: 30px 50px;
+  padding: 20px;
 }
 
-.trendingn-container span {
-  max-width: 100%;
-  color: #ee007b;
-  font-size: 20px;
-  overflow: hidden;
-}
-
-.trending-Headers {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* CARDS */
+/* CARDS GRID */
 .trending-cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
+/* CARD */
 .card {
-  width: 300px;
-  max-width: 100%;
-  background-color: #eeeeee;
-  border-radius: 40px;
+  background: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.2s;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.thumb {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* CARD INFO */
 .card-info {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
   align-items: center;
+  padding: 10px;
 }
 
 .card-info img {
-  width: 50px;
+  width: 30px;
 }
 
-.card .thumb {
-  border-radius: 20px 20px 0 0;
-
-}
-
-/* TOP GAMES */
-.top-games {
-  padding: 50px 30px;
-}
-
-.top-games span {
-  color: #ee0067;
-  font-size: 20px;
-}
-
-.trending-games {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* 📱 MOBILE RESPONSIVE */
+/* 📱 MOBILE */
 @media (max-width: 768px) {
 
   .header {
     flex-direction: column;
     gap: 10px;
-    text-align: center;
-  }
-
-  .landing-page {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .landing-page-left {
-    width: 100%;
-  }
-
-  .landing-page-main-image img {
-    width: 100%;
-    margin-top: 20px;
   }
 
   .trending-cards {
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
   }
 
 }
